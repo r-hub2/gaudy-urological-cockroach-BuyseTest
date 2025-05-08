@@ -1,0 +1,58 @@
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste("R package version", meta$Version)
+
+citHeader(paste("To cite the 'BuyseTest' package in publications use the citation Ozenne et al. from ",year,".\n
+                 To cite the statistical method used by the 'BuyseTest' package, use
+          Buyse (2010): binary/continous endpoint or time to event endpoints with scoring.rule=\"Gehan\",
+          Peron et al. (2016): time to event endpoint with scoring.rule=\"Peron\" (default),
+          Ozenne et al. (2018): inferential method based on U-statistics  (default),
+          Piffoux et al. (2024) time to event endpoint with a restriction time.",sep=""))
+
+bibentry(bibtype="Manual",
+         title = "BuyseTest: Implementation of the Generalized Pairwise Comparisons",
+         author = c(person("Brice","Ozenne"),
+                    person("Julien","Peron")),
+         year = year,
+         note = vers)
+
+
+bibentry(bibtype="Article",
+         title = "Generalized pairwise comparisons of prioritized outcomes in the two-sample problem",
+         author = person("Marc","Buyse"),
+         year = "2010",
+         volume = "29",
+         number = "30",
+         pages = "3245--3257",
+         journal = "Statistics in medicine",
+         doi = "10.1002/sim.3923",
+         textVersion = "Buyse, M. (2010), Generalized pairwise comparisons of prioritized outcomes in the two-sample problem. Statistics in medicine, 29: 3245-3257. doi:10.1002/sim.3923")
+
+bibentry(bibtype="Article",
+         title = "An extension of generalized pairwise comparisons for prioritized outcomes in the presence of censoring",
+         author = c(person("Julien","Peron"), person("Marc","Buyse"), person("Brice","Ozenne"), person("Laurent","Roche"), person("Pascal","Roy")),
+         year = "2018",
+         volume = "27",
+         number = "4",
+         pages = "1230--1239",
+         journal = "Statistical methods in medical research",
+         doi = "10.1177/0962280216658320")
+
+bibentry(bibtype="Article",
+         title = "The asymptotic distribution of the Net Benefit estimator in presence of right-censoring",
+         author = c(person("Brice","Ozenne"), person("Esben","Budtz-Jorgensen"), person("Julien","Peron")),
+         year = "2021",
+         volume = "30",
+         number = "11",
+         pages = "2399--2412",
+         journal = "Statistical methods in medical research",
+         doi = "10.1177/09622802211037067")
+
+bibentry(bibtype="Article",
+         title = "Restricted Net Treatment Benefit in oncology",
+         author = c(person("Max","Piffoux"), person("Brice","Ozenne"), person("Mickaël","De Backer"), person("Marc","Buyse"), person("Jean-Christophe","Chiem"), person("Julien","Peron")),
+         year = "2024",
+         volume = "170",
+         journal = "Statistical methods in medical research",
+         doi = "10.1016/j.jclinepi.2024.111340")
+         
+         
